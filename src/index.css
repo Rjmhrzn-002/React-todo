@@ -1,0 +1,103 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input {
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  padding: 10px 15px;
+  box-shadow: 0 0px 5px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.4);
+}
+
+input:hover,
+button:hover {
+  box-shadow: 0 2px 2px hsla(0, 0%, 0%, 0.6), 0 1px 2px hsla(0, 0%, 0%, 0.1);
+}
+
+button:active {
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.4);
+  transform: translateY(2px);
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 15px;
+  min-width: 640px;
+  height: 540px;
+  padding: 10px 20px;
+  box-shadow: 0 0px 5px hsla(0, 0%, 0%, 0.2), 1px 2px 20px hsla(0, 0%, 80%, 1);
+  overflow-y: hidden;
+}
+
+form {
+  display: flex;
+  height: 50px;
+  margin: 10px 0;
+}
+
+form > input {
+  flex: 1;
+}
+form * {
+  font-size: 1.1rem;
+}
+
+form button {
+  background-color: rgb(93, 184, 71);
+  font-weight: 600;
+  color: whitesmoke;
+  margin-left: 15px;
+}
+
+.todos {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px 10px;
+  border-bottom: 1px solid gray;
+}
+
+.icons {
+  font-size: 1.5rem;
+}
+
+.icons:nth-child(1) {
+  background-color: rgb(93, 184, 71);
+  color: whitesmoke;
+  margin-right: 15px;
+}
+
+.icons:nth-child(2) {
+  background-color: rgb(180, 3, 3);
+  color: whitesmoke;
+  font-weight: 600;
+}
+
+.todos h3 {
+  flex: 1;
+  font-size: 1.2rem;
+  font-family: "Courier New", Courier, monospace;
+  text-transform: uppercase;
+}
+
+#displayTodos {
+  overflow-y: auto;
+}
+
+.todoDone {
+  text-decoration: line-through;
+}
